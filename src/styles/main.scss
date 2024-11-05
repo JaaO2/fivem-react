@@ -1,0 +1,206 @@
+@import "./../../node_modules/@awesome.me/kit-8a564a3416/icons/css/all.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+html, body {
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #006992;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #006992;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #666;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.nopermission {
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ff2a3a;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  span {
+    background: #aa2030;
+    padding: 2rem;
+  }
+}
+
+.errorInput {
+  background: #aa2030;
+  color: #fff;
+  padding: 0.3rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 70%;
+  max-width: 70%;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.Login_input {
+
+  display: flex;
+  justify-content: center;
+
+  .Login_input_icon {
+      background: #006992;
+      padding: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0.3rem 0 0.3rem 0.3rem;
+      border-radius: 1rem 0 0 1rem;
+      border: 0.3rem solid #006992;
+      font-size: 1.7rem;
+  }
+
+  input {
+      min-width: 100%;
+      max-width: 100%;
+      background: #666;
+      color: #fff;
+      outline: none;
+      border: none;
+      border: 0.3rem solid #666;
+      font-size: 1.7rem;
+      font-weight: bold;
+      padding: 0.6rem;
+      margin: 0.3rem 0.3rem 0.3rem 0;
+      border-radius: 0 1rem 1rem 0;
+
+      &::placeholder {
+          color: #fff;
+      }
+
+      &:focus {
+          border-bottom: 0.3rem solid #006992;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:active,
+      &:-internal-autofill-selected,
+      &:-internal-autofill-selected:focus, 
+      &:-internal-autofill-selected:hover,
+      &:-internal-autofill-selected:active {
+        transition: background-color 5000s;
+        -webkit-text-fill-color: #fff !important      }
+  }
+
+}
+
+button {
+  background: #006992;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1rem;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+
+  &:hover {
+      background: #005881;
+      cursor: pointer;
+  }
+
+  &:disabled {
+    background: #666;
+  }
+}
+
+
+
+.Login_checkbox {
+ /* Stylizacja checkboxa */
+input[type="checkbox"] {
+  display: none; /* Ukryj domyślny checkbox */
+}
+
+input[type="checkbox"] + label {
+  position: relative; /* Pozycjonowanie dla pseudoelementu */
+  padding-left: 2rem; /* Odstęp dla tekstu label, aby zrobić miejsce na ptaszka */
+  cursor: pointer; /* Pokaż wskaźnik, że można kliknąć */
+  color: #fff; /* Kolor tekstu */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] + label::before {
+  content: ''; /* Pusty content, będzie służył jako miejsce na ptaszka */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Rozmiar kwadratu dla checkboxa */
+  height: 20px;
+  border: 4px solid #006992; /* Ramka wokół miejsca na ptaszka */
+  border-radius: 3px; /* Lekkie zaokrąglenie rogów */
+}
+
+input[type="checkbox"]:checked + label::before{
+  background: #006992;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: '\2713'; /* Unicode dla ptaszka */
+  position: absolute;
+  left: 7px;
+  top: 0;
+  font-size: 1.2rem; /* Rozmiar ptaszka */
+  color: #fff; /* Kolor ptaszka */
+  font-weight: bold;
+}
+
+}
